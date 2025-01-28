@@ -16,7 +16,7 @@ function Login() {
   const handleLogin = async () => {
     try {
       // Wysłanie danych do backendu
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://vps.maciejkaczmarczyk.com/login", {
         username,
         password,
       });
@@ -43,28 +43,13 @@ function Login() {
         <h1 className="text-black font-bold text-3xl">Zaloguj się</h1>
         <div className="flex gap-2 flex-col justify-start w-full">
           <h2 className="text-black">Login</h2>
-          <input
-            className="bg-white border-black border-2 w-full p-1 rounded-md focus:border-[#FFD400] outline-none text-black"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Podaj login"
-          />
+          <input className="bg-white border-black border-2 w-full p-1 rounded-md focus:border-[#FFD400] outline-none text-black" type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Podaj login" />
         </div>
         <div className="flex gap-2 flex-col justify-start w-full">
           <h2 className="text-black">Hasło</h2>
-          <input
-            className="bg-white border-black border-2 w-full p-1 rounded-md outline-none focus:border-[#FFD400] text-black"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Podaj hasło"
-          />
+          <input className="bg-white border-black border-2 w-full p-1 rounded-md outline-none focus:border-[#FFD400] text-black" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Podaj hasło" />
         </div>
-        <button
-          onClick={handleLogin}
-          className="mt-8 text-black bg-[#FFD400] px-10 py-2 rounded-xl hover:bg-black hover:text-white duration-200"
-        >
+        <button onClick={handleLogin} className="mt-8 text-black bg-[#FFD400] px-10 py-2 rounded-xl hover:bg-black hover:text-white duration-200">
           Zaloguj
         </button>
       </div>

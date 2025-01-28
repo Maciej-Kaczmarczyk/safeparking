@@ -33,7 +33,7 @@ const AddReservation = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/reservations", formData); // Endpoint do dodawania rezerwacji
+      await axios.post("https://vps.maciejkaczmarczyk.com/reservations", formData); // Endpoint do dodawania rezerwacji
       alert("Rezerwacja została dodana!");
 
       // Resetowanie formularza

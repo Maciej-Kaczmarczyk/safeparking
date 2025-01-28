@@ -30,7 +30,7 @@ const ReservationDetails = () => {
 
   const handleStatusChange = async (newStatus) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/reservation/${id}/status`, { status: newStatus });
+      const response = await axios.patch(`https://vps.maciejkaczmarczyk.com/reservation/${id}/status`, { status: newStatus });
       alert(`Status został zmieniony na: ${newStatus}`);
       setReservation((prev) => ({
         ...prev,

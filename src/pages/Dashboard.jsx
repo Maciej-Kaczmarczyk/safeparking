@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/reservations");
+        const response = await axios.get("https://vps.maciejkaczmarczyk.com/reservations");
         setReservations(response.data);
       } catch (err) {
         setError(err.message);

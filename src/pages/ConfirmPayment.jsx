@@ -16,7 +16,7 @@ const ConfirmPayment = () => {
         metoda: paymentMethod,
         data_płatności: new Date().toISOString().split("T")[0], // Dzisiejsza data
       };
-      await axios.post(`http://localhost:5000/reservation/${id}/payment`, paymentData);
+      await axios.post(`https://vps.maciejkaczmarczyk.com/reservation/${id}/payment`, paymentData);
       alert("Płatność została potwierdzona!");
       navigate(`/reservation/${id}`); // Przekierowanie z powrotem do szczegółów rezerwacji
     } catch (err) {

@@ -13,7 +13,7 @@ const ConfirmService = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/reservation/${id}/services`);
+        const response = await axios.get(`https://vps.maciejkaczmarczyk.com/reservation/${id}/services`);
         console.log("Fetched services:", response.data); // Logowanie danych
         setServices(response.data);
       } catch (err) {
@@ -30,7 +30,7 @@ const ConfirmService = () => {
   // Zmiana statusu usługi na "Zrealizowana"
   const handleConfirmService = async (serviceId) => {
     try {
-      await axios.patch(`http://localhost:5000/reservation/${id}/services/${serviceId}/status`, {
+      await axios.patch(`https://vps.maciejkaczmarczyk.com/reservation/${id}/services/${serviceId}/status`, {
         status: "Zrealizowana",
       });
       alert("Status usługi został zmieniony na Zrealizowana.");
