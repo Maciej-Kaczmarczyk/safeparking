@@ -32,7 +32,7 @@ function Navbar() {
           <p onClick={() => navigate("/dashboard")} className="text-black font-semibold hover:cursor-pointer">
             Rezerwacje
           </p>
-          {role === "Praconik ochrony" || role === "Kierownik" ? (
+          {role === "Pracownik ochrony" || role === "Kierownik" ? (
             <p onClick={() => navigate("/cameras")} className="text-black font-semibold hover:cursor-pointer">
               Monitoring
             </p>
