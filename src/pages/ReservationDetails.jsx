@@ -15,7 +15,7 @@ const ReservationDetails = () => {
     const fetchReservationDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/reservation/${id}` // Endpoint szczegółów rezerwacji
+          `https://vps.maciejkaczmarczyk.com/reservation/${id}` // Endpoint szczegółów rezerwacji
         );
         setReservation(response.data);
       } catch (err) {
