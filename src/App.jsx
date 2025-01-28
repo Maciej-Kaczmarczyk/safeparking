@@ -4,7 +4,6 @@ import ContentContainer from "./components/ContentContainer";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard.jsx"; // Upewnij się, że Dashboard jest zaimportowany
-import { Toaster } from "sonner";
 import useAuthStore from "./store/authStore";
 import ReservationDetails from "./pages/ReservationDetails.jsx";
 import AddReservation from "./pages/AddReservation.jsx";
@@ -18,7 +17,6 @@ function App() {
 
   return (
     <Router>
-      <Toaster />
       <Navbar />
       <ContentContainer>
         <Routes>
