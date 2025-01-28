@@ -28,7 +28,7 @@ const AddServices = () => {
 
     try {
       setLoading(true);
-      await axios.post(`http://localhost:5000/reservation/${id}/services`, newService);
+      await axios.post(`https://vps.maciejkaczmarczyk.com/reservation/${id}/services`, newService);
       alert("Usługa została dodana!");
       navigate(`/reservation/${id}`); // Redirect back to reservation details
     } catch (err) {
